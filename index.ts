@@ -54,7 +54,7 @@ process.on("SIGINT", async () => {
     client.on("ready", async () => {
         log(`\x1b[94mLogged In As ${client.user?.displayName}`, "i")
         global.startTime = Date.now()
-        reloadPresence(client)
+        
         if(global.config.cmdPrefix) global.commands = await commandHandler()
         global.channel = client.channels.cache.get(global.config.channelID[0]) as TextChannel | NewsChannel
         main()
