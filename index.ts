@@ -18,7 +18,7 @@ export const global = {
     slashError: 0,
     totalcmd: 0,
     totaltxt: 0,
-    prefix: ["owo"]
+    prefix: ["w"]
 } as Tool
 
 global.FolderPath = path.join(os.homedir(), "data")
