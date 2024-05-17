@@ -151,29 +151,6 @@ const commandHandler = async () => {
     return commands
 }
 
-const reloadPresence = async (client:discord.Client) => {
-    const getExternalURL = await discord.RichPresence.getExternal(
-        client,
-        "367827983903490050",
-        "https://i.imgur.com/9wrvM38.png",
-        "https://i.imgur.com/MscNx02.png"
-    )
-    const activity = new discord.RichPresence()
-        .setApplicationId("367827983903490050")
-        .setType("PLAYING")
-        .setName("I AM ETERNITYYY")
-        .setDetails("Simply fulfilling my duties")
-        .setStartTimestamp(client.readyAt!)
-        .setAssetsLargeImage(getExternalURL[0].external_asset_path)
-        .setAssetsLargeText("You Dare Challenge me?")
-        .setAssetsSmallImage(getExternalURL[1].external_asset_path)
-        .setAssetsSmallText("BKI Eternityyy")
-        .addButton('Github', "https://github.com/LongAKolangle/discord-owo-selfbot")
-        .addButton('Youtube', "https://www.youtube.com/@daongotau")
-    client.user?.setActivity(activity.toJSON())
-    client.user?.setStatus("idle")
-}
-
 const solveCaptcha = async (client: discord.Client, url?:string, huntbotCaptcha = false) => {
     if(url && !huntbotCaptcha) {
         const response = await axios.get(url, {
