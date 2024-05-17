@@ -11,7 +11,7 @@ import { quotes } from "./lib/data.js";
 
 let timeoutChannel = ranInt(17, 51), timeoutShift = ranInt(38, 92), timeoutOther:number, timeoutPray:number,
 timeoutSleep = mapInt(timeoutShift, 38, 92, 160_000, 1_275_000), timeoutDelay = ranInt(15000, 22000), timeoutHuntbot:number
-let ordinary = ["hunt", "battle", "hunt", "battle", "hunt"], other = ["run", "pup", "piku"],
+let ordinary = ["h", "b", "h", "b", "h"], other = ["run", "pup", "piku"],
 box = false, inv:string[], gem1:number[] | undefined, gem2:number[] | undefined, gem3:number[] | undefined
 const traits = ["Efficiency", "Duration", "Cost", "Gain", "Experience", "Radar"]
 
@@ -86,7 +86,7 @@ const aQuote = async () => {
 }
 
 const aHuntbot = async () => {
-    const cmd = ["huntbot", "autohunt", "hb", "ah"]
+    const cmd = ["ah", "ah", "hb", "ah"]
     await send(cmd[ranInt(0, cmd.length)])
     const collector = global.channel.createMessageCollector({
         filter: msg => msg.author.id == global.owoID && msg.embeds[0] && msg.embeds[0].author !== null && msg.embeds[0].author.name.includes(msg.guild?.members.me?.displayName!) && msg.embeds[0].author.name.includes("HuntBot"), 
