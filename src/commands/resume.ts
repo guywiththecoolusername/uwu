@@ -8,12 +8,12 @@ export default {
         if(global.paused) {
             global.paused = false
             global.captchaDetected = false
-            message.reply("Tool is resume!")
+            message.reply("The Tool Is resumed")
             main()
         } else message.reply(
             global.captchaDetected ? 
             "**ACTION REQUIRED!** You must solve the captcha before resuming the tool" :
-            "Tool is not paused!"
+            "The Tool has not been paused."
         )
     }
 }
