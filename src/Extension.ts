@@ -268,4 +268,4 @@ const checkUpdate = async () => {
     }
 }
 
-export { timeHandler, consoleNotify, commandHandler, accountCheck, accountRemove, reloadPresence, checkUpdate, solveCaptcha, mapInt, send, sleep, shuffleArray, ranInt }
+export { timeHandler, consoleNotify, commandHandler, accountCheck, accountRemove, checkUpdate, solveCaptcha, mapInt, send, sleep, shuffleArray, ranInt }
