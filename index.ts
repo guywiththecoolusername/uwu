@@ -5,7 +5,7 @@ import path from "node:path"
 import os from "node:os"
 import fs from "node:fs"
 
-import { commandHandler, consoleNotify, ranInt, reloadPresence, send, sleep, solveCaptcha } from "./src/Extension.js"
+import { commandHandler, consoleNotify, ranInt, send, sleep, solveCaptcha } from "./src/Extension.js"
 import { Configuration, Tool } from "./src/lib/class.js"
 import { main, selfbotNotify } from "./src/SelfbotWorker.js"
 import { collectData } from "./src/DataCollector.js"
